@@ -50,6 +50,7 @@ type
 {$endif}
 
 {$ifdef FUNCTIONS}
+function CFNumberGetTypeID: CFTypeID; cdecl; external;
 function CFNumberCreate(allocator: CFAllocatorRef; theType: CFNumberType; valuePtr: pointer): CFNumberRef; cdecl; external;
 function CFNumberGetType(number: CFNumberRef): CFNumberType; cdecl; external;
 function CFNumberGetByteSize(number: CFNumberRef): CFIndex; cdecl; external;

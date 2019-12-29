@@ -78,10 +78,6 @@ type
     {$endif}
   end;
 type
-  private:AudioBufferList(AudioBufferList&) = AudioBufferList;
-type
-  private:AudioBufferList(AudioBufferList&)Ptr = ^AudioBufferList;
-type
   AudioBufferListPtr = ^AudioBufferList;
 {$endif}
 
@@ -203,7 +199,6 @@ const
   kAudioFormatFlagsCanonical = 1;
   CA_CANONICAL_DEPRECATED = kAudioFormatFlagIsFloat + kAudioFormatFlagsNativeEndian + kAudioFormatFlagIsPacked;
   kAudioFormatFlagsAudioUnitCanonical = 2;
-  CA_CANONICAL_DEPRECATED = kAudioFormatFlagIsFloat + kAudioFormatFlagsNativeEndian + kAudioFormatFlagIsPacked + kAudioFormatFlagIsNonInterleaved;
   {$else}
   kAudioFormatFlagsCanonical = 3;
   CA_CANONICAL_DEPRECATED = kAudioFormatFlagIsSignedInteger + kAudioFormatFlagsNativeEndian + kAudioFormatFlagIsPacked;
@@ -319,10 +314,6 @@ type
     AudioChannelLayout&)_: AudioChannelLayout& operator=(;
     {$endif}
   end;
-type
-  private:AudioChannelLayout(AudioChannelLayout&) = AudioChannelLayout;
-type
-  private:AudioChannelLayout(AudioChannelLayout&)Ptr = ^AudioChannelLayout;
 type
   AudioChannelLayoutPtr = ^AudioChannelLayout;
 

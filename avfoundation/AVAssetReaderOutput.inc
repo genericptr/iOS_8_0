@@ -22,7 +22,7 @@ type
     function mediaType: NSString; message 'mediaType';
     procedure setAlwaysCopiesSampleData(newValue: boolean); message 'setAlwaysCopiesSampleData:';
     function alwaysCopiesSampleData: boolean; message 'alwaysCopiesSampleData';
-    function copyNextSampleBuffer CF_RETURNS_RETAINED: CMSampleBufferRef; message 'copyNextSampleBuffer CF_RETURNS_RETAINED';
+    function copyNextSampleBuffer: CMSampleBufferRef; message 'copyNextSampleBuffer';
   end;
 
 

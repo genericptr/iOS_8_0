@@ -632,7 +632,7 @@ const
   kScheduledAudioSliceFlag_InterruptAtLoop = $20;
 
 type
-  ScheduledAudioSliceCompletionProc = procedure (userData: pointer; bufferList: ScheduledAudioSlicePtr); cdecl;
+ScheduledAudioSliceCompletionProc = procedure (userData: pointer; bufferList: pointer{ScheduledAudioSlicePtr}); cdecl;
 
 type
   ScheduledAudioSlice = record
@@ -656,7 +656,7 @@ const
   kAudioUnitProperty_ScheduledFileNumberBuffers = 3314;
 
 type
-  ScheduledAudioFileRegionCompletionProc = procedure (userData: pointer; fileRegion: ScheduledAudioFileRegionPtr; result_: OSStatus); cdecl;
+ScheduledAudioFileRegionCompletionProc = procedure (userData: pointer; fileRegion: pointer{ScheduledAudioFileRegionPtr}; result_: OSStatus); cdecl;
 
 type
   ScheduledAudioFileRegion = record

@@ -60,7 +60,7 @@ type
   private
     _internal: AVCaptureScreenInputInternal;
   public
-    function initWithDisplayID (displayID: CGDirectDisplayID): id; message 'initWithDisplayID:';
+function initWithDisplayID (displayID: pointer{CGDirectDisplayID}): id; message 'initWithDisplayID:';
     procedure setMinFrameDuration(newValue: CMTime); message 'setMinFrameDuration:';
     function minFrameDuration: CMTime; message 'minFrameDuration';
     procedure setCropRect(newValue: CGRect); message 'setCropRect:';

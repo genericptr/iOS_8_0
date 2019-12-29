@@ -12,6 +12,7 @@ type
 {$endif}
 
 {$ifdef FUNCTIONS}
+function CFDataGetTypeID: CFTypeID; cdecl; external;
 function CFDataCreate(allocator: CFAllocatorRef; bytes: pointer; length: CFIndex): CFDataRef; cdecl; external;
 function CFDataCreateWithBytesNoCopy(allocator: CFAllocatorRef; bytes: pointer; length: CFIndex; bytesDeallocator: CFAllocatorRef): CFDataRef; cdecl; external;
 function CFDataCreateCopy(allocator: CFAllocatorRef; theData: CFDataRef): CFDataRef; cdecl; external;

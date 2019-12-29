@@ -12,6 +12,7 @@ type
 {$endif}
 
 {$ifdef FUNCTIONS}
+function CFAttributedStringGetTypeID: CFTypeID; cdecl; external;
 function CFAttributedStringCreate(alloc: CFAllocatorRef; str: CFStringRef; attributes: CFDictionaryRef): CFAttributedStringRef; cdecl; external;
 function CFAttributedStringCreateWithSubstring(alloc: CFAllocatorRef; aStr: CFAttributedStringRef; range: CFRange): CFAttributedStringRef; cdecl; external;
 function CFAttributedStringCreateCopy(alloc: CFAllocatorRef; aStr: CFAttributedStringRef): CFAttributedStringRef; cdecl; external;

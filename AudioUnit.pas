@@ -195,11 +195,11 @@
 unit AudioUnit;
 interface
 
-{$linkframework AudioUnit}
+{linkframework AudioUnit}
 
 uses
 {$if defined(IPHONEALL) and not defined(GROUP_INDEPENDENT)}
-	 DefinedClassesCoreMIDI, DefinedClassesAudioUnit, CoreMIDI, AudioToolbox, CoreAudio, CTypes, MacTypes, MacOSXPosix, iPhoneAll;
+	 DefinedClassesCoreMIDI, DefinedClassesAudioUnit, CoreMIDI, {AudioToolbox,} CoreAudio, CTypes, MacTypes, MacOSXPosix, iPhoneAll;
 {$else}
 	 DefinedClassesCoreMIDI, DefinedClassesAudioUnit, CoreMIDI, AudioToolbox, CoreFoundation, CoreAudio, CTypes, MacTypes, MacOSXPosix;
 {$endif}

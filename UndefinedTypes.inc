@@ -29,3 +29,9 @@ const
 // ??? what is this value in FPC?
 const	
 	DBL_MAX = high(clong);
+
+
+{$if FPC_FULLVERSION <= 30004}
+type
+  objcbool = bool;
+{$endif}

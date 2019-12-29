@@ -10,6 +10,27 @@ type
 {$endif}
 
 {$ifdef PROTOCOLS}
+type
+  AVAudioStereoMixingProtocol = objcprotocol external name 'AVAudioStereoMixing' (NSObjectProtocol)
+    procedure setPan(newValue: single); message 'setPan:';
+    function pan: single; message 'pan';
+  end;
+
+type
+  AVAudio3DMixingProtocol = objcprotocol external name 'AVAudio3DMixing' (NSObjectProtocol)
+    procedure setRenderingAlgorithm(newValue: AVAudio3DMixingRenderingAlgorithm); message 'setRenderingAlgorithm:';
+    function renderingAlgorithm: AVAudio3DMixingRenderingAlgorithm; message 'renderingAlgorithm';
+    procedure setRate(newValue: single); message 'setRate:';
+    function rate: single; message 'rate';
+    procedure setReverbBlend(newValue: single); message 'setReverbBlend:';
+    function reverbBlend: single; message 'reverbBlend';
+    procedure setObstruction(newValue: single); message 'setObstruction:';
+    function obstruction: single; message 'obstruction';
+    procedure setOcclusion(newValue: single); message 'setOcclusion:';
+    function occlusion: single; message 'occlusion';
+    procedure setPosition(newValue: AVAudio3DPoint); message 'setPosition:';
+    function position: AVAudio3DPoint; message 'position';
+  end;
 
 type
   AVAudioMixingProtocol = objcprotocol external name 'AVAudioMixing' (AVAudioStereoMixingProtocol, AVAudio3DMixingProtocol)
@@ -17,11 +38,6 @@ type
     function volume: single; message 'volume';
   end;
 
-type
-  AVAudioStereoMixingProtocol = objcprotocol external name 'AVAudioStereoMixing' (NSObjectProtocol)
-    procedure setPan(newValue: single); message 'setPan:';
-    function pan: single; message 'pan';
-  end;
 {$endif}
 
 {$ifdef TYPES}
@@ -39,20 +55,5 @@ const
 
 {$ifdef PROTOCOLS}
 
-type
-  AVAudio3DMixingProtocol = objcprotocol external name 'AVAudio3DMixing' (NSObjectProtocol)
-    procedure setRenderingAlgorithm(newValue: AVAudio3DMixingRenderingAlgorithm); message 'setRenderingAlgorithm:';
-    function renderingAlgorithm: AVAudio3DMixingRenderingAlgorithm; message 'renderingAlgorithm';
-    procedure setRate(newValue: single); message 'setRate:';
-    function rate: single; message 'rate';
-    procedure setReverbBlend(newValue: single); message 'setReverbBlend:';
-    function reverbBlend: single; message 'reverbBlend';
-    procedure setObstruction(newValue: single); message 'setObstruction:';
-    function obstruction: single; message 'obstruction';
-    procedure setOcclusion(newValue: single); message 'setOcclusion:';
-    function occlusion: single; message 'occlusion';
-    procedure setPosition(newValue: AVAudio3DPoint); message 'setPosition:';
-    function position: AVAudio3DPoint; message 'position';
-  end;
 {$endif}
 

@@ -3,7 +3,7 @@
 
 {$ifdef TYPES}
 type
-  MIDIDriverRef = ^MIDIDriverInterfacePtr;
+MIDIDriverRef = pointer{MIDIDriverInterfacePtr};
 {$endif}
 
 {$if defined(__LP64__)}

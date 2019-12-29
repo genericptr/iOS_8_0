@@ -18,6 +18,7 @@ type
   AudioServicesPropertyID = UInt32;
   AudioServicesPropertyIDPtr = ^AudioServicesPropertyID;
   AudioServicesSystemSoundCompletionProc = procedure (ssID: SystemSoundID; clientData: pointer); cdecl;
+AudioObjectPropertyAddressPtr = pointer;
 
 const
   {$if defined(TARGET_OS_IPHONE)}

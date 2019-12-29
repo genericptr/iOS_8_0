@@ -21,6 +21,7 @@ type
 {$endif}
 
 {$ifdef FUNCTIONS}
+function CFURLGetTypeID: CFTypeID; cdecl; external;
 function CFURLCreateWithBytes(allocator: CFAllocatorRef; URLBytes: pointer; length: CFIndex; encoding: CFStringEncoding; baseURL: CFURLRef): CFURLRef; cdecl; external;
 function CFURLCreateData(allocator: CFAllocatorRef; url: CFURLRef; encoding: CFStringEncoding; escapeWhitespace: Boolean): CFDataRef; cdecl; external;
 function CFURLCreateWithString(allocator: CFAllocatorRef; URLString: CFStringRef; baseURL: CFURLRef): CFURLRef; cdecl; external;

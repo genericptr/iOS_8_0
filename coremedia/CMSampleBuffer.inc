@@ -70,7 +70,7 @@ function CMSampleBufferCopyPCMDataIntoAudioBufferList(sbuf: CMSampleBufferRef; f
 function CMSampleBufferSetDataReady(sbuf: CMSampleBufferRef): OSStatus; cdecl; external; { available starting in __MAC_10_7,__IPHONE_4_0 }
 function CMSampleBufferDataIsReady(sbuf: CMSampleBufferRef): Boolean; cdecl; external; { available starting in __MAC_10_7,__IPHONE_4_0 }
 function CMSampleBufferSetDataFailed(sbuf: CMSampleBufferRef; status: OSStatus): OSStatus; cdecl; external; { available starting in __MAC_10_10,__IPHONE_8_0 }
-function CMSampleBufferHasDataFailed(sbuf: CMSampleBufferRef; statusOut: OSStatusPtr): Boolean; cdecl; external; { available starting in __MAC_10_10,__IPHONE_8_0 }
+function CMSampleBufferHasDataFailed(sbuf: CMSampleBufferRef; statusOut: pointer{OSStatusPtr}): Boolean; cdecl; external; { available starting in __MAC_10_10,__IPHONE_8_0 }
 function CMSampleBufferMakeDataReady(sbuf: CMSampleBufferRef): OSStatus; cdecl; external; { available starting in __MAC_10_7,__IPHONE_4_0 }
 function CMSampleBufferTrackDataReadiness(sbuf: CMSampleBufferRef; sbufToTrack: CMSampleBufferRef): OSStatus; cdecl; external; { available starting in __MAC_10_7,__IPHONE_4_0 }
 function CMSampleBufferInvalidate(sbuf: CMSampleBufferRef): OSStatus; cdecl; external; { available starting in __MAC_10_7,__IPHONE_4_0 }

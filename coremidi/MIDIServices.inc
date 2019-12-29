@@ -76,9 +76,9 @@ const
   kMIDIInvalidUniqueID = 0;
 
 type
-  MIDINotifyProc = procedure (message_: MIDINotificationPtr; refCon: pointer); cdecl;
-  MIDIReadProc = procedure (pktlist: MIDIPacketListPtr; readProcRefCon: pointer; srcConnRefCon: pointer); cdecl;
-  MIDICompletionProc = procedure (request: MIDISysexSendRequestPtr); cdecl;
+MIDINotifyProc = procedure (message_: pointer{MIDINotificationPtr}; refCon: pointer); cdecl;
+MIDIReadProc = procedure (pktlist: pointer{MIDIPacketListPtr}; readProcRefCon: pointer; srcConnRefCon: pointer); cdecl;
+MIDICompletionProc = procedure (request: pointer{MIDISysexSendRequestPtr}); cdecl;
 
 type
   MIDIPacket = record

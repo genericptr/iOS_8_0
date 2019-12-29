@@ -27,7 +27,7 @@ type
 
 type
   AVTimedMetadataGroupSerializationSupport = objccategory external (AVTimedMetadataGroup)
-    function copyFormatDescription                          CF_RETURNS_RETAINED: CMMetadataFormatDescriptionRef; message 'copyFormatDescription                          CF_RETURNS_RETAINED'; { available in 10_10, 8_0 }
+    function copyFormatDescription: CMMetadataFormatDescriptionRef; message 'copyFormatDescription'; { available in 10_10, 8_0 }
   end;
 
 

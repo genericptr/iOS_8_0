@@ -23,9 +23,11 @@ type
     procedure finalize; message 'finalize';
     function description: NSString; message 'description';
     function debugDescription: NSString; message 'debugDescription';
-    class function respondsToSelector (aSelector: SEL): boolean; message 'respondsToSelector:';
+    class function classRespondsToSelector (aSelector: SEL): objcbool; message 'respondsToSelector:';
     function allowsWeakReference: boolean; message 'allowsWeakReference';
     function retainWeakReference: boolean; message 'retainWeakReference';
+
+    function respondsToSelector(aSelector: SEL): objcbool; message 'respondsToSelector:';
   end;
 {$endif}
 

@@ -21,7 +21,7 @@ function GetNameFromSoundBank(inSoundBankRef: FSRefPtr; outName: CFStringRef): O
 {$endif}
 {$ifdef FUNCTIONS}
 function CopyNameFromSoundBank(inURL: CFURLRef; outName: CFStringRef): OSStatus; cdecl; external; { available starting in __MAC_10_5,__IPHONE_7_0 }
-function CopyInstrumentInfoFromSoundBank(inURL: CFURLRef; outInstrumentInfo: CFArrayRefPtr): OSStatus; cdecl; external; { available starting in __MAC_10_8,__IPHONE_7_0 }
+function CopyInstrumentInfoFromSoundBank(inURL: CFURLRef; outInstrumentInfo: pointer{CFArrayRefPtr}): OSStatus; cdecl; external; { available starting in __MAC_10_8,__IPHONE_7_0 }
 {$endif}
 
 {$ifdef TYPES}

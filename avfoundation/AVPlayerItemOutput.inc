@@ -89,17 +89,16 @@ type
 {$endif}
 
 {$ifdef PROTOCOLS}
+type
+  AVPlayerItemOutputPushDelegateProtocol = objcprotocol external name 'AVPlayerItemOutputPushDelegate' (NSObjectProtocol)
+  optional
+    procedure outputSequenceWasFlushed (output: AVPlayerItemOutput); message 'outputSequenceWasFlushed:';
+  end;
 
 type
   AVPlayerItemLegibleOutputPushDelegateProtocol = objcprotocol external name 'AVPlayerItemLegibleOutputPushDelegate' (AVPlayerItemOutputPushDelegateProtocol)
   optional
     procedure legibleOutput_didOutputAttributedStrings_nativeSampleBuffers_forItemTime (output: AVPlayerItemLegibleOutput; strings: NSArray; nativeSamples: NSArray; itemTime: CMTime); message 'legibleOutput:didOutputAttributedStrings:nativeSampleBuffers:forItemTime:'; { available in 10_9, 7_0 }
-  end;
-
-type
-  AVPlayerItemOutputPushDelegateProtocol = objcprotocol external name 'AVPlayerItemOutputPushDelegate' (NSObjectProtocol)
-  optional
-    procedure outputSequenceWasFlushed (output: AVPlayerItemOutput); message 'outputSequenceWasFlushed:';
   end;
 {$endif}
 

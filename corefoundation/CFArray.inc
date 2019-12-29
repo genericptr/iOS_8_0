@@ -37,6 +37,7 @@ type
 {$endif}
 
 {$ifdef FUNCTIONS}
+function CFArrayGetTypeID: CFTypeID; cdecl; external;
 function CFArrayCreate(allocator: CFAllocatorRef; values: pointer; numValues: CFIndex; callBacks: CFArrayCallBacksPtr): CFArrayRef; cdecl; external;
 function CFArrayCreateCopy(allocator: CFAllocatorRef; theArray: CFArrayRef): CFArrayRef; cdecl; external;
 function CFArrayCreateMutable(allocator: CFAllocatorRef; capacity: CFIndex; callBacks: CFArrayCallBacksPtr): CFMutableArrayRef; cdecl; external;

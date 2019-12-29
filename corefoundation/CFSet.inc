@@ -40,6 +40,7 @@ type
 {$endif}
 
 {$ifdef FUNCTIONS}
+function CFSetGetTypeID: CFTypeID; cdecl; external;
 function CFSetCreate(allocator: CFAllocatorRef; values: pointer; numValues: CFIndex; callBacks: CFSetCallBacksPtr): CFSetRef; cdecl; external;
 function CFSetCreateCopy(allocator: CFAllocatorRef; theSet: CFSetRef): CFSetRef; cdecl; external;
 function CFSetCreateMutable(allocator: CFAllocatorRef; capacity: CFIndex; callBacks: CFSetCallBacksPtr): CFMutableSetRef; cdecl; external;

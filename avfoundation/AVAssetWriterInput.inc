@@ -83,7 +83,7 @@ type
     function performsMultiPassEncodingIfSupported: boolean; message 'performsMultiPassEncodingIfSupported';
     function canPerformMultiplePasses: boolean; message 'canPerformMultiplePasses';
     function currentPassDescription: AVAssetWriterInputPassDescription; message 'currentPassDescription';
-    procedure respondToEachPassDescriptionOnQueue_usingBlock (queue: dispatch_queue_t; block: dispatch_block_t); message 'respondToEachPassDescriptionOnQueue:usingBlock:'; { available in 10_10, 8_0 }
+    procedure respondToEachPassDescriptionOnQueue_usingBlock (queue: dispatch_queue_t; block: pointer{dispatch_block_t}); message 'respondToEachPassDescriptionOnQueue:usingBlock:'; { available in 10_10, 8_0 }
     procedure markCurrentPassAsFinished; message 'markCurrentPassAsFinished'; { available in 10_10, 8_0 }
   end;
 

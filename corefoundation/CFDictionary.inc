@@ -59,6 +59,7 @@ type
 {$endif}
 
 {$ifdef FUNCTIONS}
+function CFDictionaryGetTypeID: CFTypeID; cdecl; external;
 function CFDictionaryCreate(allocator: CFAllocatorRef; keys: pointer; values: pointer; numValues: CFIndex; keyCallBacks: CFDictionaryKeyCallBacksPtr; valueCallBacks: CFDictionaryValueCallBacksPtr): CFDictionaryRef; cdecl; external;
 function CFDictionaryCreateCopy(allocator: CFAllocatorRef; theDict: CFDictionaryRef): CFDictionaryRef; cdecl; external;
 function CFDictionaryCreateMutable(allocator: CFAllocatorRef; capacity: CFIndex; keyCallBacks: CFDictionaryKeyCallBacksPtr; valueCallBacks: CFDictionaryValueCallBacksPtr): CFMutableDictionaryRef; cdecl; external;

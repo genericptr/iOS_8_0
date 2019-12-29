@@ -29,6 +29,7 @@ var
 {$endif}
 
 {$ifdef FUNCTIONS}
+function CFDateGetTypeID: CFTypeID; cdecl; external;
 function CFDateCreate(allocator: CFAllocatorRef; at: CFAbsoluteTime): CFDateRef; cdecl; external;
 function CFDateGetAbsoluteTime(theDate: CFDateRef): CFAbsoluteTime; cdecl; external;
 function CFDateGetTimeIntervalSinceDate(theDate: CFDateRef; otherDate: CFDateRef): CFTimeInterval; cdecl; external;

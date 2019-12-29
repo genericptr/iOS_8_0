@@ -107,13 +107,6 @@ type
     {$endif}
   end;
 type
-  #endif}AudioQueueBuffer = AudioQueueBuffer;
-type
-  #endif}AudioQueueBufferPtr = ^AudioQueueBuffer;
-type
-  AudioQueueBufferPtr = ^AudioQueueBuffer;
-
-type
   AudioQueueBufferRef = ^AudioQueueBuffer;
 
 type

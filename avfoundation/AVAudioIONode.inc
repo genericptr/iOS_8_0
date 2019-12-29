@@ -15,7 +15,7 @@ type
   AVAudioIONode = objcclass external (AVAudioNode)
   public
     function presentationLatency: NSTimeInterval; message 'presentationLatency';
-    function audioUnit: AudioUnit; message 'audioUnit';
+    function audioUnit: pointer{AudioUnit}; message 'audioUnit';
   end;
 
 type

@@ -134,7 +134,10 @@ type
     {$if defined(TARGET_OS_IPHONE)}
     function initWithSharegroup (sharegroup: EAGLSharegroup): instancetype; message 'initWithSharegroup:';
     {$else}
-    function initWithShareContext (context: NSOpenGLContextPtr): instancetype; message 'initWithShareContext:';
+		{
+		building from xcode for ios sim is running this code
+		}
+    //function initWithShareContext (context: NSOpenGLContextPtr): instancetype; message 'initWithShareContext:';
     {$endif}
     procedure textureWithContentsOfFile_options_queue_completionHandler (path: NSString; options: NSDictionary; queue: dispatch_queue_t; block: GLKTextureLoaderCallback); message 'textureWithContentsOfFile:options:queue:completionHandler:';
     procedure textureWithContentsOfURL_options_queue_completionHandler (url: NSURL; options: NSDictionary; queue: dispatch_queue_t; block: GLKTextureLoaderCallback); message 'textureWithContentsOfURL:options:queue:completionHandler:';
