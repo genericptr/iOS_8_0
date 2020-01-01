@@ -4,37 +4,69 @@
 {$ifndef ES1_GLEXT_H_GUARD}
 
 {$ifdef TYPES}
-const
-  GL_APPLE_copy_texture_levels = 1;
-  GL_APPLE_framebuffer_multisample = 1;
-  GL_APPLE_texture_2D_limited_npot = 1;
-  GL_APPLE_texture_format_BGRA8888 = 1;
-  GL_APPLE_texture_max_level = 1;
-  GL_EXT_blend_minmax = 1;
-  GL_EXT_debug_label = 1;
-  GL_EXT_debug_marker = 1;
-  GL_EXT_discard_framebuffer = 1;
-  GL_EXT_map_buffer_range = 1;
-  GL_EXT_read_format_bgra = 1;
-  GL_EXT_texture_filter_anisotropic = 1;
-  GL_EXT_texture_lod_bias = 1;
-  GL_EXT_texture_storage = 1;
-  GL_IMG_read_format = 1;
-  GL_IMG_texture_compression_pvrtc = 1;
-  GL_OES_blend_equation_separate = 1;
-  GL_OES_blend_func_separate = 1;
-  GL_OES_blend_subtract = 1;
-  GL_OES_depth24 = 1;
-  GL_OES_element_index_uint = 1;
-  GL_OES_fbo_render_mipmap = 1;
-  GL_OES_framebuffer_object = 1;
-  GL_OES_mapbuffer = 1;
-  GL_OES_packed_depth_stencil = 1;
-  GL_OES_rgb8_rgba8 = 1;
-  GL_OES_stencil_wrap = 1;
-  GL_OES_stencil8 = 1;
-  GL_OES_texture_mirrored_repeat = 1;
-  GL_OES_vertex_array_object = 1;
+//const
+//  GL_APPLE_copy_texture_levels = 1;
+//  GL_APPLE_framebuffer_multisample = 1;
+//  GL_APPLE_texture_2D_limited_npot = 1;
+//  GL_APPLE_texture_format_BGRA8888 = 1;
+//  GL_APPLE_texture_max_level = 1;
+//  GL_EXT_blend_minmax = 1;
+//  GL_EXT_debug_label = 1;
+//  GL_EXT_debug_marker = 1;
+//  GL_EXT_discard_framebuffer = 1;
+//  GL_EXT_map_buffer_range = 1;
+//  GL_EXT_read_format_bgra = 1;
+//  GL_EXT_texture_filter_anisotropic = 1;
+//  GL_EXT_texture_lod_bias = 1;
+//  GL_EXT_texture_storage = 1;
+//  GL_IMG_read_format = 1;
+//  GL_IMG_texture_compression_pvrtc = 1;
+//  GL_OES_blend_equation_separate = 1;
+//  GL_OES_blend_func_separate = 1;
+//  GL_OES_blend_subtract = 1;
+//  GL_OES_depth24 = 1;
+//  GL_OES_element_index_uint = 1;
+//  GL_OES_fbo_render_mipmap = 1;
+//  GL_OES_framebuffer_object = 1;
+//  GL_OES_mapbuffer = 1;
+//  GL_OES_packed_depth_stencil = 1;
+//  GL_OES_rgb8_rgba8 = 1;
+//  GL_OES_stencil_wrap = 1;
+//  GL_OES_stencil8 = 1;
+//  GL_OES_texture_mirrored_repeat = 1;
+//  GL_OES_vertex_array_object = 1;
+
+{$define GL_APPLE_copy_texture_levels}
+{$define GL_APPLE_framebuffer_multisample}
+{$define GL_APPLE_texture_2D_limited_npot}
+{$define GL_APPLE_texture_format_BGRA8888}
+{$define GL_APPLE_texture_max_level}
+{$define GL_EXT_blend_minmax}
+{$define GL_EXT_debug_label}
+{$define GL_EXT_debug_marker}
+{$define GL_EXT_discard_framebuffer}
+{$define GL_EXT_map_buffer_range}
+{$define GL_EXT_read_format_bgra}
+{$define GL_EXT_texture_filter_anisotropic}
+{$define GL_EXT_texture_lod_bias}
+{$define GL_EXT_texture_storage}
+{$define GL_IMG_read_format}
+{$define GL_IMG_texture_compression_pvrtc}
+{$define GL_OES_blend_equation_separate}
+{$define GL_OES_blend_func_separate}
+{$define GL_OES_blend_subtract}
+{$define GL_OES_depth24}
+{$define GL_OES_element_index_uint}
+{$define GL_OES_fbo_render_mipmap}
+{$define GL_OES_framebuffer_object}
+{$define GL_OES_mapbuffer}
+{$define GL_OES_packed_depth_stencil}
+{$define GL_OES_rgb8_rgba8}
+{$define GL_OES_stencil_wrap}
+{$define GL_OES_stencil8}
+{$define GL_OES_texture_mirrored_repeat}
+{$define GL_OES_vertex_array_object}
+
 {$endif}
 
 {$if defined(GL_APPLE_framebuffer_multisample)}
@@ -432,7 +464,7 @@ function glGenerateMipmapOES(target: GLenum): GLvoid; cdecl; external;
 
 {$if defined(GL_OES_mapbuffer)}
 {$ifdef FUNCTIONS}
-function glGetBufferPointervOES(target: GLenum; pname: GLenum; params: GLvoidPtrPtr): GLvoid; cdecl; external;
+function glGetBufferPointervOES(target: GLenum; pname: GLenum; params: GLvoidPtr): GLvoid; cdecl; external;
 function glMapBufferOES(target: GLenum; access: GLenum): GLvoidPtr; cdecl; external;
 function glUnmapBufferOES(target: GLenum): GLboolean; cdecl; external;
 {$endif}
