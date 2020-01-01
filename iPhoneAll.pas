@@ -212,6 +212,9 @@ interface
 
 uses
 	CTypes, MacTypes, MacOSXPosix,
+  {$ifndef IPHONEALL_GLFUNC}
+  GLES11,
+  {$endif}
   DefinedClassesCoreFoundation, DefinedClassesSecurity, DefinedClassesFoundation, DefinedClassesCoreGraphics, DefinedClassesOpenGLES, DefinedClassesCoreImage, DefinedClassesCoreText, DefinedClassesQuartzCore, DefinedClassesUIKit, DefinedClassesMobileCoreServices, CFNetwork;
 
 {$define INTERFACE}
